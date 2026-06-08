@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LUTFY Downloader</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 10px;
+      width: 70%;
+      border-radius: 10px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: cyan;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>LUTFY Downloader</h1>
+
+<input type="text" id="url" placeholder="Paste link TikTok">
+<br><br>
+<button onclick="goDownload()">Download</button>
+
+<p id="msg"></p>
+
+<footer style="position:fixed;bottom:10px;width:100%">
+  by LUTFY 🚀
+</footer>
+
+<script>
+function goDownload() {
+  const url = document.getElementById("url").value;
+
+  if (!url) {
+    document.getElementById("msg").innerText = "Masukkan link dulu!";
+    return;
+  }
+
+  // redirect ke downloader publik (fix)
+  window.location.href = "https://snaptik.app/ID?url=" + encodeURIComponent(url);
+}
+</script>
+
+</body>
+  </html>
